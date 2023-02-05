@@ -1,0 +1,18 @@
+url = ('http://newsapi.org/v2/everything?' #search everything
+       'q=samsung&' 
+       #q - Keywords or phrases to search for keyword in the article title and body. 
+       #qInTitle - request to Keywords or phrases to search for keyword in the article title only.
+       'from=2023-01-30&'#from date
+       'to=2023-02-05&'#to date
+       'domains=bbc.co.uk&'#domains that we want
+       'language=en&'#choose your language
+       'sortBy=popularity&'#if we want to sort by popularity,relevancy or publishedAt
+       'pageSize=30&' #if we want the number of articles default is 20 and maximum is 100
+       'apiKey=4ac92a95346643fdbdb26a7e4d0e98b1') #this is compulsory
+
+#create request to get news article from newsapi
+response = requests.get(url)
+     
+
+#test the connection
+response
