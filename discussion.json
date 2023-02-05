@@ -1,0 +1,46 @@
+{
+    "board_name": "Financial Independence Message Board for Women in Engineering",
+    "board_description": "Welcome to the Financial Independence Message Board for Women in Engineering. This board is dedicated to empowering women in engineering by providing them with resources and support to achieve financial independence. Share your experiences, ask questions, and connect with other women in the industry.",
+    "discussions": [
+      {
+        "subject": "The best investment strategies for women in engineering",
+        "replies": [
+          {
+            "username": "JaneDoe",
+            "message": "I highly recommend investing in low-cost index funds. It has been a great strategy for me and many others in the industry."
+          },
+          {
+            "username": "SarahSmith",
+            "message": "I agree with Jane. Index funds are a great way to diversify your investments and minimize risk."
+          }
+        ]
+      },
+      {
+        "subject": "Negotiating your salary as a woman in engineering",
+        "replies": [
+          {
+            "username": "EmmaJohnson",
+            "message": "I always research the average salary for my position and location before negotiating my salary. This helps me have concrete evidence to support my request."
+          },
+          {
+            "username": "LenaWilliams",
+            "message": "I also recommend practicing your negotiation skills and preparing a list of your achievements and contributions to the company to support your request."
+          }
+        ]
+      },
+      {
+        "subject": "How to save for a comfortable retirement as a woman in engineering",
+        "replies": [
+          {
+            "username": "AvaBrown",
+            "message": "I have found that setting a budget and sticking to it is key to saving for retirement. I also make sure to contribute to my 401k every month."
+          },
+          {
+            "username": "OliviaDavis",
+            "message": "I also recommend considering a robo-advisor or financial advisor to help you make informed decisions about your retirement savings."
+          }
+        ]
+      }
+    ]
+  }
+  
