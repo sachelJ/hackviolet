@@ -1,0 +1,124 @@
+
+
+<head>
+
+    
+    <style type="text/css">
+        .menutitle{
+        cursor:pointer;
+        margin-bottom: 5px;
+        background-color:#ECECFF;
+        color:#000000;
+        width:140px;
+        padding:2px;
+        text-align:center;
+        font-weight:bold;
+        /*/*/border:1px solid #000000;/* */
+        }
+        
+        .submenu{
+        margin-bottom: 2em;
+        }
+        </style>
+        
+        <script type="text/javascript">
+
+        
+        var persistmenu="yes" 
+        var persisttype="sitewide" 
+        
+        if (document.getElementById){ 
+        document.write('<style type="text/css">\n')
+        document.write('.submenu{display: none;}\n')
+        document.write('</style>\n')
+        }
+        
+        function SwitchMenu(obj){
+            if(document.getElementById){
+            var el = document.getElementById(obj);
+            var ar = document.getElementById("masterdiv").getElementsByTagName("span"); 
+                if(el.style.display != "block"){ 
+                    for (var i=0; i<ar.length; i++){
+                        if (ar[i].className=="submenu") 
+                        ar[i].style.display = "none";
+                    }
+                    el.style.display = "block";
+                }else{
+                    el.style.display = "none";
+                }
+            }
+        }
+        
+        function get_cookie(Name) { 
+        var search = Name + "="
+        var returnvalue = "";
+        if (document.cookie.length > 0) {
+        offset = document.cookie.indexOf(search)
+        if (offset != -1) { 
+        offset += search.length
+        end = document.cookie.indexOf(";", offset);
+        if (end == -1) end = document.cookie.length;
+        returnvalue=unescape(document.cookie.substring(offset, end))
+        }
+        }
+        return returnvalue;
+        }
+        
+        function onloadfunction(){
+        if (persistmenu=="yes"){
+        var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+        var cookievalue=get_cookie(cookiename)
+        if (cookievalue!="")
+        document.getElementById(cookievalue).style.display="block"
+        }
+        }
+        
+        function savemenustate(){
+        var inc=1, blockid=""
+        while (document.getElementById("sub"+inc)){
+        if (document.getElementById("sub"+inc).style.display=="block"){
+        blockid="sub"+inc
+        break
+        }
+        inc++
+        }
+        var cookiename=(persisttype=="sitewide")? "switchmenu" : window.location.pathname
+        var cookievalue=(persisttype=="sitewide")? blockid+";path=/" : blockid
+        document.cookie=cookiename+"="+cookievalue
+        }
+        
+        if (window.addEventListener)
+        window.addEventListener("load", onloadfunction, false)
+        else if (window.attachEvent)
+        window.attachEvent("onload", onloadfunction)
+        else if (document.getElementById)
+        window.onload=onloadfunction
+        
+        if (persistmenu=="yes" && document.getElementById)
+        window.onunload=savemenustate
+        
+        </script>
+</head>
+<div id="masterdiv">
+
+	<div class="Succesful Strategies To Prepare For Your Retirement" onclick="SwitchMenu('sub1')">Succesful Strategies To Prepare For Your Retirement</div>
+	<span class="submenu" id="sub1">
+		- <a href="ROTH_IRA.html">Roth IRA</a><br>
+		- <a href="401KPlans.htm">401K Plans</a><br>
+		- <a href="SocialSecurity.htm">Social Security</a><br>
+	</span>
+
+	<div class="What If I Have  Dependants?" onclick="SwitchMenu('sub2')">FAQ/Help</div>
+	<span class="submenu" id="sub2">
+		- <a href="notice.htm">Life Insurance</a><br>
+		- <a href="faqs.htm">When To Write a Will</a><br>
+		- <a href="help.htm">College Planning (529 Plan)</a>
+	</span>
+
+	<div class="What If I Held A Government Job?" onclick="SwitchMenu('sub3')">Help Forum</div>
+	<span class="submenu" id="sub3">
+		- <a href="http://www.codingforums.com">Pensions</a><br>
+        - <a href="http://www.codingforums.com">Government Benefits</a><br>
+	</span>
+	
+</div>
