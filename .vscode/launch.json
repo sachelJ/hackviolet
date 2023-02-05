@@ -5,43 +5,10 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "command": "npm start",
-            "name": "Run npm start",
+            "type": "chrome",
             "request": "launch",
-            "type": "node-terminal"
-        },
-        {
-            "args": [
-                "--extensionDevelopmentPath=${workspaceFolder}"
-            ],
-            "name": "Launch Extension",
-            "outFiles": [
-                "${workspaceFolder}/out/**/*.js"
-            ],
-            "preLaunchTask": "npm",
-            "request": "launch",
-            "type": "extensionHost"
-        },
-        {
-            "type": "mix_task",
-            "name": "mix (Default task)",
-            "request": "launch",
-            "projectDir": "${workspaceRoot}"
-        },
-        {
-            "type": "mix_task",
-            "name": "mix test",
-            "request": "launch",
-            "task": "test",
-            "taskArgs": [
-                "--trace"
-            ],
-            "startApps": true,
-            "projectDir": "${workspaceRoot}",
-            "requireFiles": [
-                "test/**/test_helper.exs",
-                "test/**/*_test.exs"
-            ]
+            "name": "Open Retirement.html",
+            "file": "c:\\Users\\sache\\OneDrive\\Documents\\hackviolet\\Retirement.html"
         }
     ]
 }
